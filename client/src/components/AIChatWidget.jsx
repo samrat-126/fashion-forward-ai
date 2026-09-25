@@ -57,7 +57,7 @@ function AIChatWidget() {
     setIsTyping(true);
 
     try {
-      const response = await fetch('https://fashion-forward-ai.onrender.com//api/ai/consult', {
+      const response = await fetch('https://fashion-forward-ai.onrender.comapi/ai/consult', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
