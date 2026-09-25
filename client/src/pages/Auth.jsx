@@ -14,7 +14,7 @@ function Auth({ setCurrentPage, setToken }) {
     const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
     
     try {
-      const response = await fetch(`https://fashion-forward-ai.onrender.com/${endpoint}`, {
+      const response = await fetch(`https://fashion-forward-ai.onrender.com${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
