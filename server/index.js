@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const Outfit = require('./models/Outfit'); 
 const User = require('./models/User'); // NEW: Import the User model
-
+const { askFashionAI } = require('./services/aiService');
 const app = express();
 app.use(cors({
     origin: true, // This dynamically reflects the requesting domain
