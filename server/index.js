@@ -9,7 +9,10 @@ const Outfit = require('./models/Outfit');
 const User = require('./models/User'); // NEW: Import the User model
 
 const app = express();
-app.use(cors()); 
+app.use(cors({
+    origin: '*', // Allows access from any domain. 
+    credentials: true
+})); 
 app.use(express.json()); 
 
 const PORT = process.env.PORT || 5000;
