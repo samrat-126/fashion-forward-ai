@@ -7,7 +7,7 @@ function Home({ setCurrentPage }) {
 
   // --- FETCH DATA FROM EXPRESS BACKEND ---
   useEffect(() => {
-    fetch('https://fashion-forward-ai.onrender.com//api/outfits')
+    fetch('https://fashion-forward-ai.onrender.com///api/outfits')
       .then(response => response.json())
       .then(data => {
         setSavedOutfits(data); // Save the database info into React State
