@@ -41,7 +41,7 @@ function AccessoryVault({ setCurrentPage }) {
 
     try {
       // 3. Call your universal backend AI socket
-      const response = await fetch('https://fashion-forward-ai.onrender.com//api/ai/consult', {
+      const response = await fetch('https://fashion-forward-api.onrender.com/api/ai/consult', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

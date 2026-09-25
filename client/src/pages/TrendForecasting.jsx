@@ -15,7 +15,7 @@ function TrendForecasting({ setCurrentPage }) {
 
 const handleAskAI = async (userInput, type) => {
   try {
-    const response = await fetch('https://fashion-forward-ai.onrender.com//api/ai/consult', {
+    const response = await fetch('https://fashion-forward-api.onrender.com/api/ai/consult', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt: userInput, contextType: type })
@@ -40,7 +40,7 @@ const handleAskAI = async (userInput, type) => {
 
     try {
       // Call your backend AI socket
-      const response = await fetch('https://fashion-forward-ai.onrender.com//api/ai/consult', {
+      const response = await fetch('https://fashion-forward-api.onrender.com/api/ai/consult', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
