@@ -18,7 +18,7 @@ async function askFashionAI(promptText, base64Image = null) {
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.5-flash-lite',
+      model: 'gemini-2.5-flash-lite',
       contents: contents, // 2. Pass the array you built, not just the text!
       config: {
         systemInstruction: "You are an elite, high-end AI Fashion Director and Trend Forecaster for 'Fashion Forward AI'. Give sharp, concise, professional, and stylish advice.",
