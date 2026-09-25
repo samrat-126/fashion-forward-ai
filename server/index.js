@@ -10,9 +10,9 @@ const User = require('./models/User'); // NEW: Import the User model
 
 const app = express();
 app.use(cors({
-    origin: '*', // Allows access from any domain. 
+    origin: true, // This dynamically reflects the requesting domain
     credentials: true
-})); 
+}));
 app.use(express.json()); 
 
 const PORT = process.env.PORT || 5000;
