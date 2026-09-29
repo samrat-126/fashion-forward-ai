@@ -107,6 +107,20 @@ mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/fashion-for
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is running smoothly on port ${PORT}`);
+
+// Dummy routes for Practical 10 Postman Testing
+app.get('/api/test', (req, res) => {
+    res.status(200).json({ message: "GET request successful: Data fetched" });
+});
+
+app.put('/api/test/:id', (req, res) => {
+    res.status(200).json({ message: `PUT request successful: Record ${req.params.id} updated` });
+});
+
+app.delete('/api/test/:id', (req, res) => {
+    res.status(200).json({ message: `DELETE request successful: Record ${req.params.id} removed` });
+});
+
 });
 
 const Trend = require('./models/Trend');
